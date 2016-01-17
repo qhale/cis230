@@ -8,7 +8,7 @@ require 'includes/nav.php';
 <header>
     <h1>Dogs available for adoption:</h1>
 </header>
-<div class="row">
+<div class="row product-row">
     <div class="col-3">
         <figure>
             <img src="images/whiteboxer.jpg">
@@ -34,7 +34,7 @@ require 'includes/nav.php';
         </figure>
     </div>
 </div>
-<div class="row">
+<div class="row product-row">
     <div class="col-3">
         <figure>
             <img src="images/boxer5.jpg">

@@ -264,25 +264,25 @@ input[type="text"], input[type="tel"], input[type="email"] {
 }
 
 /*-- Products CSS --*/
-#portfolio figure .col-3 {
+.product-row figure .col-3 {
     box-shadow: 8px 5px 5px lightgrey;
 }
-#portfolio figure {
+.product-row figure {
     margin: 0;
 }
-#portfolio .col-3 a {
+.product-row .col-3 a {
     display: block;
     color: black;
     text-align: center;
     text-decoration: none;
 }
 
-#portfolio figure img {
+.product-row figure img {
     width: 200px;
     height: 120px;
     border: 2px;
 }
-#portfolio img:hover {
+.product-row img:hover {
     opacity: 0.4;
     /*filter: alpha(opacity=40); /* For IE8 and earlier */
 }

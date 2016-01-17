@@ -8,7 +8,7 @@ require 'includes/nav.php';
 <header>
     <h1>Details for [dog]:</h1>
 </header>
-<div class="row">
+<div class="row product-row">
     <div class="col-3">
         <figure>
             <img src="images/whiteboxer.jpg">

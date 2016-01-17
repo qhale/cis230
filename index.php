@@ -5,6 +5,11 @@ require 'includes/nav.php';
 
 ?>
 
+<header>
+    <div class="logo">
+        <h1><img src="images/quail.jpeg" alt="logo">QHale's Boxer Adoption</h1>
+    </div>
+</header>
 <main class="container">
     <div class="row">
         <div class="col-6 left">
