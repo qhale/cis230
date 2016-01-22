@@ -2,16 +2,26 @@
 $title = 'Contact Us';
 require 'includes/head.php';
 require 'includes/nav.php';
+require 'includes/utilities.php';
 
+$interest = $_POST['interest'];
 $fname = $_POST['fname'];
-$lname = $_POST ['lname'];
-$email = $_POST ['email'];
-$phone = $_POST ['phone'];
-$question = $_POST ['question'];
-$newsletter = $_POST ['newsletter'];
-$c_email = $_POST ['c_email'];
-$c_phone = $_POST ['c_phone'];
+$lname = $_POST['lname'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$question = $_POST['question'];
+$newsletter = $_POST['newsletter'];
+$contact = $_POST['contact']; //radio button choice
+$submit = $_POST['submit'];
 
+$c_newsletter = $newsletter == "on" ? 'checked="checked"': "";
+
+$c_email = $contact == "c_email" ? 'checked="checked"': "";
+$c_phone = $contact == "c_phone" ? 'checked="checked"': "";
+
+$inquiry = array("General Inquiry", "Volunteer", "Other");
+$selected_inquiry = $_POST['inquiry'];
+$select = createSelect('inquiry', $inquiry, $selected_inquiry);
 
 ?>
 
@@ -24,46 +34,53 @@ $c_phone = $_POST ['c_phone'];
 <?php
 $contact_form = <<<EOF
 
-        <form method="post" action="index.php">
+        <form method="post" action="contactus.php">
             <fieldset>
                 <legend>Thank You for Contacting Us</legend>
                 <div>
                     <label for="inquiry">Inquiry Type</label>
-                    <select id="inquiry" name="inquiry" required>
-                        <option value>Select an Inquiry</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="volunteer">Volunteer</option>
-                        <option value="other">Other</option>
-                    </select>
+                    $select
                 </div>
                 <label>First Name</label>
-                <input type="text" required value="$fname"><br>
+                <input type="text" name="fname" value="$fname"><br>
                 <label>Last Name</label>
-                <input type="text" required value="$lname"><br>
+                <input type="text" name="lname" value="$lname"><br>
                 <label>Email</label>
-                <input type="text" placeholder="Best email to reach you" value="$email" required><br>
+                <input type="text" name="email" placeholder="Best email to reach you" value="$email"><br>
                 <label>Phone</label>
-                <input type="text" value="$phone" required><br>
+                <input type="text" name="phone" value="$phone"><br>
             </fieldset>
-            <textarea rows="7" cols="63" placeholder="Your message to us :)">$question</textarea>
+            <textarea rows="7" cols="63" name="question" placeholder="Your message to us :)">$question</textarea>
             <p>
                 Would you like to sign up for our newsletter?
             </p>
-            <input type="checkbox" name="newsletter" $newsletter>Yes
+            <input type="checkbox" name="newsletter" $c_newsletter>Yes
             <p>
                 How would you prefer to be contacted?
             </p>
-            <input type="radio" class="radio" name="contact" value="Email" $c_email checked>Email
+            <input type="radio" class="radio" name="contact" value="c_email" $c_email checked>Email
             <br>
-            <input type="radio" class="radio" name="contact" value="Phone" $c_phone>Phone
+            <input type="radio" class="radio" name="contact" value="c_phone" $c_phone>Phone
             <br><br>
             <input class="contactbutton" type="submit" value="Submit">
             <input class="contactbutton" type="submit" value="Reset">
         </form>
 
 EOF;
-        echo $form;
+        echo $contact_form;
         ?>
+
+<!--
+/*        print_r($POST);
+        */?>
+        </pre>
+        </div>
+        <h5>Form REesults:</h5>
+        <p>Name: </p>
+        <p>Email: </p>
+        <p>Phone: </p>
+        <p>I prefer to be contacted by: </p>-->
+
 
     </div>
     <div class="col-6 contactright">
