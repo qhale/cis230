@@ -286,3 +286,22 @@ input[type="text"], input[type="tel"], input[type="email"] {
     opacity: 0.4;
     /*filter: alpha(opacity=40); /* For IE8 and earlier */
 }
+
+/*-- CSS Styling Fixes after PHP --*/
+.link-on-white-back:link {color:black;}
+.link-on-white-back:visited {color:darkgrey;}
+.link-on-white-back:hover {color:lightpink;}
+
+/*-- Story Edit --*/
+.story-edit-container {
+    padding: 60px 10px 10px 10px;
+}
+
+/*-- News --*/
+.news-archive {
+    padding-left: 40px;
+}
+.news-archive p {
+    margin-top: 0;
+    font-size: 12px;
+}
