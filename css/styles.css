@@ -305,3 +305,16 @@ input[type="text"], input[type="tel"], input[type="email"] {
     margin-top: 0;
     font-size: 12px;
 }
+
+/*-- Login --*/
+.login-form input[type="submit"]{
+    display: block;
+    margin: 12px auto;
+}
+
+.login-forgot-pw {
+    font-size: .75em;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
