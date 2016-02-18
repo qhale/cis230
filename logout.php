@@ -1,7 +1,13 @@
 <?php
+session_start();
+session_destroy();
+header("Location:index.php");
+
 $title = 'Logout';
 require 'includes/head.php';
 require 'includes/nav.php';
+
+
 
 ?>
 
@@ -16,5 +22,4 @@ require 'includes/nav.php';
 
 <?php
 require 'includes/footer-logout.php';
-
 ?>

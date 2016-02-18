@@ -15,7 +15,7 @@ if ($submit) {
     $sql = "SELECT * FROM users WHERE email='$user_email'";
     $result = $db->query($sql);
     list($user_id, $f_name, $l_name, $user_email, $password, $role) = $result->fetch_row();
-    
+
     if ($readable_pw == $password){
         $_SESSION['f_name']=$f_name;
         ob_clean();
