@@ -13,6 +13,8 @@ function createSelect($name, array $a, $selected_inquiry){
     return $select;
 }
 
+
+//temporary password
 $lower = implode(range('a','z'));
 $upper = implode(range('A','Z'));
 $number = implode(range(0, 9));
