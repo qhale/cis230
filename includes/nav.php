@@ -2,7 +2,16 @@
 <div class="top-bar">
     <div class="container">
         <ul>
-            <li><a href="login.php">Account</a></li>
+            <?php
+            if (isset($_SESSION['f_name'])){ //user logged in
+                echo "<li><a href='admin.php'>Admin</a></li>";
+                echo "<li> | </li>";
+                echo "<li><a href='logout.php'>Logout</a></li>";
+            }
+            else { //user logged out
+                echo "<li><a href='login.php'>Login</a></li>";
+            };
+            ?>
             <li> | </li>
             <li><a href="contactus.php">Contact Us</a></li>
         </ul>

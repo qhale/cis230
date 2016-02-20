@@ -15,11 +15,11 @@ if ($submit) {
     $sql = "SELECT * FROM users WHERE email='$user_email'";
     $result = $db->query($sql);
     list($user_id, $f_name, $l_name, $user_email, $password, $role) = $result->fetch_row();
-
-    if ($readable_pw == $password){
+    
+    if (password_verify($readable_pw, $password)){
         $_SESSION['f_name']=$f_name;
         ob_clean();
-        header("Location: story_admin.php");
+        header("Location: user_admin.php");
     }
     else {
         echo "<br>Login Failed";

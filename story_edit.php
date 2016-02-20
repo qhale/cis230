@@ -14,7 +14,6 @@ else{
     $story_id = 1;
 }
 
-$story_id=$_GET['story_id'];
 $sql = "SELECT * FROM stories WHERE story_id=$story_id";
 $result = $db -> query($sql);
 list($story_id, $headline, $byline, $text, $pub_date) = $result -> fetch_row();
