@@ -39,15 +39,15 @@ require 'includes/data_connection.php';
                     echo "<td>$user_email</td>";
                     echo "<td>$password</td>";
                     echo "<td>$role</td>";
-                    echo "<td><a href='user_edit.php?story_id=$user_id'>Edit</a></td>";
-                    echo "<td><a href='user_delete.php?story_id=$user_id'>Delete</a></td>";
+                    echo "<td><a href='user_edit.php?user_id=$user_id'>Edit</a></td>";
+                    echo "<td><a href='user_delete.php?user_id=$user_id'>Delete</a></td>";
                     echo"</tr>";
                 }
                 ?>
                 
             </table>
             <br><br>
-            <a href="user_new.php">Add New Story</a>
+            <a href="user_new.php">Add New User</a>
         </div>
     </div>
 </main>
