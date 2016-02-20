@@ -21,25 +21,30 @@ $inquiry = array("General Inquiry", "Volunteer", "Other");
 $selected_inquiry = $_POST['inquiry'];
 $select = createSelect('inquiry', $inquiry, $selected_inquiry);
 
-$errors = array();
-if (!isset($fname) || $fname === ""){
-    $errors['fname'] = "First name can't be blank";
-}
-if (!isset($lname) || $lname === ""){
-    $errors['lname'] = "Last name can't be blank";
-}
-if (!isset($email) || $email === ""){
-    $errors['email'] = "Email can't be blank";
-}
+$submit = $_POST['submit'];
 
-if (count($errors) > 0){
-    echo "<h4> Please fix the following errors </h4>";
-    echo "<ul>";
-    foreach ($errors as $key => $error){
-        echo "<li>$error</li>";
+if ($submit){
+    
+    $errors = array();
+    if (!isset($fname) || $fname === ""){
+        $errors['fname'] = "First name can't be blank";
     }
-    echo "</ul>";
-}
+    if (!isset($lname) || $lname === ""){
+        $errors['lname'] = "Last name can't be blank";
+    }
+    if (!isset($email) || $email === ""){
+        $errors['email'] = "Email can't be blank";
+    }
+
+    if (count($errors) > 0){
+        echo "<h4> Please fix the following errors </h4>";
+        echo "<ul>";
+        foreach ($errors as $key => $error){
+            echo "<li>$error</li>";
+        }
+        echo "</ul>";
+    }
+};
 
 $contact_form = <<<EOF
 
@@ -73,7 +78,7 @@ $contact_form = <<<EOF
             <br>
             <input type="radio" class="radio" name="contact" value="c_phone" $c_phone>Phone
             <br><br>
-            <input class="contactbutton" type="submit" value="Submit">
+            <input class="contactbutton" type="submit" name="submit" value="Submit">
             <input class="contactbutton" type="submit" value="Reset">
         </form>
 
