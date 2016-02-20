@@ -36,7 +36,7 @@ if ($submit) {
 $user = <<<EOU
     <div class="story-edit-container">
         <form method = "POST" action = "user_new.php">
-            <p><input type="text" name="f_name" value="$f_name" placeholder="First Name" auto focus></p>
+            <p><input type="text" name="f_name" value="$f_name" placeholder="First Name"></p>
             <p><input type="text" name="l_name" value="$l_name" placeholder="Last Name"></p>
             <p><input type="text" name="email" value="$user_email" placeholder="Email"></p>
             <p><input type="text" name="password" value="$password" placeholder="Password"></p>

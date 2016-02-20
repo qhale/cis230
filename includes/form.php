@@ -24,7 +24,7 @@ $select = createSelect('inquiry', $inquiry, $selected_inquiry);
 $submit = $_POST['submit'];
 
 if ($submit){
-    
+
     $errors = array();
     if (!isset($fname) || $fname === ""){
         $errors['fname'] = "First name can't be blank";
