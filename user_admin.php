@@ -39,8 +39,8 @@ require 'includes/data_connection.php';
                     echo "<td>$user_email</td>";
                     echo "<td>$password</td>";
                     echo "<td>$role</td>";
-                    echo "<td><a href='user_edit.php?story_id=$story_id'>Edit</a></td>";
-                    echo "<td><a href='user_delete.php?story_id=$story_id'>Delete</a></td>";
+                    echo "<td><a href='user_edit.php?story_id=$user_id'>Edit</a></td>";
+                    echo "<td><a href='user_delete.php?story_id=$user_id'>Delete</a></td>";
                     echo"</tr>";
                 }
                 ?>
