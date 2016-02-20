@@ -1,5 +1,5 @@
 <?php
-$title = 'User Page';
+$title = 'User Admin';
 require 'includes/head.php';
 require 'includes/nav.php';
 require 'includes/utilities.php';
@@ -10,7 +10,7 @@ require 'includes/data_connection.php';
 <!-- ********** User Admin ********** -->
 
 <header>
-    <h1>User Page</h1>
+    <h1>User Admin</h1>
 </header>
 <main class="container">
     <div class="row">
@@ -21,7 +21,7 @@ require 'includes/data_connection.php';
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
-                    <th>Password</th>
+                    <th >Password</th>
                     <th>Role</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -32,12 +32,13 @@ require 'includes/data_connection.php';
                 $result = $db->query($sql);
 
                 while(list($user_id, $f_name, $l_name, $user_email, $password, $role) = $result->fetch_row()){
+                    $small_password = substr($password,0,40);
                     echo "<tr>";
                     echo "<td>$user_id</td>";
                     echo "<td>$f_name</td>";
                     echo "<td>$l_name</td>";
                     echo "<td>$user_email</td>";
-                    echo "<td>$password</td>";
+                    echo "<td>$small_password...</td>";
                     echo "<td>$role</td>";
                     echo "<td><a href='user_edit.php?user_id=$user_id'>Edit</a></td>";
                     echo "<td><a href='user_delete.php?user_id=$user_id'>Delete</a></td>";
@@ -52,6 +53,7 @@ require 'includes/data_connection.php';
     </div>
 </main>
 
-<?php
-require 'includes/footer.php';
-?>
+<!-- Closing html tags -->
+        </div>
+    </body>
+</html>

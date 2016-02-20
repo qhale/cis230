@@ -83,9 +83,12 @@ EOS;
 
 echo $update_news;
 
-require 'includes/footer.php';
 ?>
 
+<!-- Closing html tags -->
+</div>
+</body>
+</html>
 
 
 

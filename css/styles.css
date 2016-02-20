@@ -318,3 +318,8 @@ input[type="text"], input[type="tel"], input[type="email"] {
     display: block;
     text-align: center;
 }
+
+/*-- User Admin --*/
+.table-password {
+    width: 200px;
+}

@@ -84,6 +84,9 @@ EOU;
 
 echo $user;
 
-require 'includes/footer.php';
-
 ?>
+
+<!-- Closing html tags -->
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = 'User Page';
+$title = 'User New';
 require 'includes/head.php';
 require 'includes/nav.php';
 require 'includes/utilities.php';
@@ -34,19 +34,24 @@ if ($submit) {
 }
 
 $user = <<<EOU
-    <form method = "POST" action = "user_new.php">
-        <p><input type="text" name="f_name" value="$f_name" placeholder="First Name" auto focus></p>
-        <p><input type="text" name="l_name" value="$l_name" placeholder="Last Name"></p>
-        <p><input type="text" name="email" value="$user_email" placeholder="Email"></p>
-        <p><input type="text" name="password" value="$password" placeholder="Password"></p>
-        <p><input type="text" name="role" value="$role" placeholder="Role"></p>
-        <input type="submit" name="submit" value="submit">
-    </form>
+    <div class="story-edit-container">
+        <form method = "POST" action = "user_new.php">
+            <p><input type="text" name="f_name" value="$f_name" placeholder="First Name" auto focus></p>
+            <p><input type="text" name="l_name" value="$l_name" placeholder="Last Name"></p>
+            <p><input type="text" name="email" value="$user_email" placeholder="Email"></p>
+            <p><input type="text" name="password" value="$password" placeholder="Password"></p>
+            <p><input type="text" name="role" value="$role" placeholder="Role"></p>
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
 
 EOU;
 echo $user;
 
-require 'includes/footer.php';
-
 ?>
+
+<!-- Closing html tags -->
+</div>
+</body>
+</html>
 

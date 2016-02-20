@@ -12,3 +12,8 @@ ob_clean();
 header("Location: user_admin.php?t=$now&confirm=deleted");
 
 ?>
+
+<!-- Closing html tags -->
+</div>
+</body>
+</html>
