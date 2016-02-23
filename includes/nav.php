@@ -4,7 +4,7 @@
         <ul>
             <?php
             if (isset($_SESSION['f_name'])){ //user logged in
-                echo "<li><a href='admin.php'>Admin</a></li>";
+                echo "<li><a href='story_admin.php'>Admin</a></li>";
                 echo "<li> | </li>";
                 echo "<li><a href='logout.php'>Logout</a></li>";
             }
