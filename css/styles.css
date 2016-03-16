@@ -323,3 +323,8 @@ input[type="text"], input[type="tel"], input[type="email"] {
 .table-password {
     width: 200px;
 }
+
+/*-- Comments --*/
+.bone {
+    width: 30px;
+}

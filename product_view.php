@@ -20,26 +20,34 @@ $result = $db->query($sql);
 list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $prod_detail)= $result->fetch_row();
 
 
-//create function to display stars
-function stars_string($avg_rating) {
-    $stars = "";
+
+// Show product (picture, name, description, etc.)
+// Show horizontal rule
+
+
+
+
+//create function to display bone
+function bone_string($avg_rating) {
+    $bone = "";
     $count = 0;
     while($count < $avg_rating) {
-        $stars .= "<img src='..images/star.png'>";
+        $bone .= "<img class='bone' src='../images/bone.png'>";
         $count += 1;
     }
-    return($stars);
+    return($bone);
 }
 
-$stars = stars_string($avg_rating);
+$bone = bone_string($avg_rating);
 
+$prod_id=$_GET['prod_id'];
 $sql = "SELECT * FROM comments WHERE prod_id=$prod_id";
 $result = $db->query($sql);
-while(list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $prod_detail)= $result->fetch_row()){
+while(list($comment_id, $comment_author, $comment, $comment_date, $rating, $prod_id)= $result->fetch_row()){
 
-    echo stars_string($rating);
+    echo bone_string($rating);
     echo "<br>";
-    echo "$comment_date";
+    echo "$comment_date<br>";
     echo "$comment_author<br>";
     echo "$comment<br>";
     echo "<hr>";

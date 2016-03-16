@@ -38,13 +38,14 @@ require 'includes/data_connection.php';
                     echo "<td>$prod_name</td>";
                     echo "<td>$prod_description</td>";
                     echo "<td>$prod_price</td>";
-                    echo "<td>$prod_catalog</td>";
+                    echo "<td><img src='..images/$prod_catalog'></td>";
                     echo "<td>$prod_detail</td>";
-                    echo "<td><a href='p_detail.php?prod_id=$prod_id'>View</a></td>";
+                    echo "<td><a href='product_view.php?prod_id=$prod_id'>View</a></td>";
                     echo "<td><a href='product_edit.php?prod_id=$prod_id'>Edit</a></td>";
                     echo "<td><a href='product_delete.php?prod_id=$prod_id'>Delete</a></td>";
                     echo"</tr>";
                 }
+                //mysqli_close($db);
                 ?>
 
             </table>

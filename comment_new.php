@@ -45,10 +45,10 @@ if ($submit) {
         $rating = mysqli_real_escape_string($db, $rating);
         $prod_id = mysqli_real_escape_string($db, $prod_id);
 
-        $sql = "INSERT INTO comments (comment_id, author, comment, comment_date, rating, prod_id) VALUES (NULL, '$comment_author', '$comment', NULL ,'$rating', '$prod_id')";
+        $sql = "INSERT INTO comments (comment_author, comment, rating, prod_id) VALUES ('$comment_author', '$comment', '$rating', '$prod_id')";
         $result = $db->query($sql);
         ob_clean();
-        header("Location:product_view.php?prod_id=$prod_id");
+        header("Location:p_detail.php?prod_id=$prod_id");
     }
 }
 

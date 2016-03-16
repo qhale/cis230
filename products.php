@@ -12,25 +12,25 @@ require 'includes/nav.php';
     <div class="col-3">
         <figure>
             <img src="images/whiteboxer.jpg">
-            <figcaption><a href="archive/p_detail.html">Gus Gus - $1</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Gus Gus - $1</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/boxer1.jpg">
-            <figcaption><a href="archive/p_detail.html">Sally - $2</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Sally - $2</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/tiredboxer.jpg">
-            <figcaption><a href="archive/p_detail.html">King Jellybean - $3</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">King Jellybean - $3</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/boxer4.jpg">
-            <figcaption><a href="archive/p_detail.html">Rick and Morty - $4</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Rick and Morty - $4</a></figcaption>
         </figure>
     </div>
 </div>
@@ -38,25 +38,25 @@ require 'includes/nav.php';
     <div class="col-3">
         <figure>
             <img src="images/boxer5.jpg">
-            <figcaption><a href="archive/p_detail.html">Jerry - $5</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Jerry - $5</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/boxer6.jpg">
-            <figcaption><a href="archive/p_detail.html">Birdperson - $6</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Birdperson - $6</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/boxer7.jpg">
-            <figcaption><a href="archive/p_detail.html">Lucky - $7</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Lucky - $7</a></figcaption>
         </figure>
     </div>
     <div class="col-3">
         <figure>
             <img src="images/boxer8.jpg">
-            <figcaption><a href="archive/p_detail.html">Mr. Meeseeks - $8</a></figcaption>
+            <figcaption><a href="p_detail.php?prod_id=1">Mr. Meeseeks - $8</a></figcaption>
         </figure>
     </div>
 </div>
