@@ -20,12 +20,12 @@ list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $prod_
 ?>
 
 <header>
-    <h1>Details for [dog]:</h1>
+    <h1>Details for <?php echo($prod_name); ?></h1>
 </header>
 <div class="row product-row">
     <div class="col-3">
         <figure>
-            <img src="images/whiteboxer.jpg">
+            <img class="image-detail" src="images/whiteboxer.jpg">
             <figcaption><a href="p_detail.php"><?php echo($prod_name); ?> - $1</a></figcaption>
         </figure>
     </div>
@@ -54,7 +54,7 @@ function bone_string($avg_rating) {
 $bone = bone_string($avg_rating);
 
 $prod_id=$_GET['prod_id'];
-$sql = "SELECT * FROM comments WHERE prod_id=$prod_id";
+$sql = "SELECT * FROM comments ORDER BY comment_date DESC LIMIT 4";
 $result = $db->query($sql);
 while(list($comment_id, $comment_author, $comment, $comment_date, $rating, $prod_id)= $result->fetch_row()){
 
@@ -80,6 +80,10 @@ $comment = <<<EOU
         <input type="hidden" name="prod_id" value="$prod_id"/>
         <p><input type="text" name="author" value="$comment_author" placeholder="Your name"></p>
         <textarea rows="7" cols="63" name="comment" placeholder="Your comments">$comment</textarea>
+        <p>
+            <label for="inquiry">Rate this boxer: </label>
+            $select
+        </p>
         <select name="rating">
             <option value="1">1 Bone</option>
             <option value="2">2 Bones</option>
@@ -87,10 +91,7 @@ $comment = <<<EOU
             <option value="4">4 Bones</option>
             <option value="5">5 Bones</option>
         </select>
-        <div>
-            <label for="inquiry">Rate this!</label>
-            $select
-        </div>
+
         <p><input type="submit" name="submit" value="Submit"></p>
     </form>
 </div>
@@ -99,6 +100,10 @@ EOU;
 
 echo $comment;
 
-require 'includes/footer.php';
+?>
 
+<a class="link-on-white-back" href="products.php">Back to available dogs</a>
+
+<?php
+require 'includes/footer.php';
 ?>
