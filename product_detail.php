@@ -7,31 +7,26 @@ require 'includes/data_connection.php';
 
 $prod_id=$_GET['prod_id'];
 
-//create product average rating
-$sql = "SELECT AVG(rating) FROM comments WHERE prod_id=$prod_id";
-$result = $db->query($sql);
-//echo $sql . "<br/>"
-$avg_rating = $result->fetch_row()[0];
-//echo "Average Rating: $avg_rating";
-
 $sql = "SELECT * FROM products WHERE prod_id=$prod_id";
 $result = $db->query($sql);
 list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $prod_detail)= $result->fetch_row();
+
 ?>
+
 
 <header>
     <h1>Details for <?php echo($prod_name); ?></h1>
 </header>
-<div class="row product-row">
-    <div class="col-3">
+<div class="row">
+    <div class="col-8">
         <figure>
-            <img class="image-detail" src="images/whiteboxer.jpg">
-            <figcaption><a href="p_detail.php"><?php echo($prod_name); ?> - $1</a></figcaption>
+            <img class="image-detail" src="images/<?php echo($prod_detail) ?>">
+            <figcaption><a href="product_detail.php"><?php echo($prod_name); ?> - $1</a></figcaption>
         </figure>
     </div>
-    <div class="col-9">
+    <div class="col-4">
         <p>
-            It's Gus Gus! And he only costs $1 to adopt! WHAT A STEAL.
+            <?php echo($prod_description); ?>
         </p>
     </div>
 </div>

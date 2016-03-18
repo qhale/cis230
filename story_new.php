@@ -52,7 +52,7 @@ if($submit){
         $new_story_id = $db->insert_id;
         mysqli_close($db);
         ob_clean();
-        header("Location:story_show.php?story_id=$new_story_id");
+        header("Location:news_detail.php?story_id=$new_story_id");
     }
 }
 

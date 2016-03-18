@@ -77,6 +77,7 @@ NC;
 echo $new_comment;
 
 ?>
+//<a href="products.php">Back to available dogs</a>
 
 <?php
 require 'includes/footer.php';

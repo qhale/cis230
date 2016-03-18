@@ -48,7 +48,7 @@ if ($submit) {
         $sql = "INSERT INTO comments (comment_author, comment, rating, prod_id) VALUES ('$comment_author', '$comment', '$rating', '$prod_id')";
         $result = $db->query($sql);
         ob_clean();
-        header("Location:p_detail.php?prod_id=$prod_id");
+        header("Location:product_detail.php?prod_id=$prod_id");
     }
 }
 

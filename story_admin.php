@@ -42,11 +42,11 @@ require 'includes/data_connection.php';
                 while(list($story_id, $headline, $byline, $text, $pub_date)=$result->fetch_row()){
                     echo "<tr>";
                         echo "<td>$story_id</td>";
-                        echo "<td><a href='story_show.php?story_id=$story_id'>$headline</a></td>";
+                        echo "<td><a href='news_detail.php?story_id=$story_id'>$headline</a></td>";
                         echo "<td>$byline</td>";
                         echo "<td>".(substr($text,0,76))."</td>";
                         echo "<td>$pub_date</td>";
-                        echo "<td><a href='story_show.php?story_id=$story_id'>View</a></td>";
+                        echo "<td><a href='news_detail.php?story_id=$story_id'>View</a></td>";
                         echo "<td><a href='story_edit.php?story_id=$story_id'>Edit</a></td>";
                         echo "<td><a href='story_delete.php?story_id=$story_id'>Delete</a></td>";
                     echo"</tr>";

@@ -64,7 +64,7 @@ if ($submit){
         ob_clean();
         //print_r($_POST);
         //print_r($result);
-        header("Location:story_show.php?story_id=$story_id");
+        header("Location:news_detail.php?story_id=$story_id");
     }
 };
 

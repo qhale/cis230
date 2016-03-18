@@ -21,22 +21,26 @@ $article_html = "";
 while(list($story_id, $headline, $byline, $text, $pub_date)=$result->fetch_row()) {
     $text_shortened = $text;
     if (strlen($text_shortened) > 800) {
-        $text_shortened = substr($text_shortened, 0, 800). "... <a class='link-on-white-back' href='story_show.php?story_id=$story_id'>Read More</a>";
+        $text_shortened = substr($text_shortened, 0, 800). "... <a class='link-on-white-back' href='news_detail.php?story_id=$story_id'>Read More</a>";
     }
 
-    $article_html .= "<h2><a class='link-on-white-back' href='story_show.php?story_id=$story_id'>".$headline."</a></h2>";
-    $article_html .= "<h3>".$byline."--".$pub_date."</h3>";
+    $article_html .= "<h2><a class='link-on-white-back' href='news_detail.php?story_id=$story_id'>" .$headline."</a></h2>";
+    $date = date_create($pub_date);
+    $formatted_date = date_format($date, 'F d, Y');
+    $article_html .= "<h3>".$byline." - ".$formatted_date."</h3>";
     $article_html .= "<p>".$text_shortened."</p>";
 }
 
-$sql = "SELECT * FROM stories ORDER BY pub_date DESC";
+$sql = "SELECT * FROM stories ORDER BY pub_date DESC LIMIT 3,5";
 //echo $sql;
 $result = $db->query($sql);
 
 $archive_html = "";
 while(list($story_id, $headline, $byline, $text, $pub_date)=$result->fetch_row()) {
-    $archive_html .= "<a class='link-on-white-back' href='story_show.php?story_id=$story_id'>" . $headline . "</a>";
-    $archive_html .= "<p>" . $pub_date . "</p>";
+    $archive_html .= "<a class='link-on-white-back' href='news_detail.php?story_id=$story_id'>" . $headline . "</a>";
+    $date = date_create($pub_date);
+    $formatted_date = date_format($date, 'F d, Y');
+    $archive_html .= "<p>" . $formatted_date . "</p>";
 }
 
 ?>

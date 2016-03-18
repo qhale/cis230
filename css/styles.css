@@ -292,6 +292,10 @@ input[type="text"], input[type="tel"], input[type="email"] {
 .link-on-white-back:visited {color:darkgrey;}
 .link-on-white-back:hover {color:lightpink;}
 
+.left-padding {
+    padding-left: 15px;
+}
+
 /*-- Story Edit --*/
 .story-edit-container {
     padding: 60px 10px 10px 10px;
@@ -328,3 +332,15 @@ input[type="text"], input[type="tel"], input[type="email"] {
 .bone {
     width: 30px;
 }
+
+/*-- Products --*/
+.image-detail {
+    width: 100%;
+}
+
+/*-- News Detail --*/
+.news-item {
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
