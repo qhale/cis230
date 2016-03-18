@@ -19,7 +19,7 @@ $image_item = "";
 while(list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $price_detail)=$result->fetch_row()){
     $image_item .='<div class="col-3">';
     $image_item .='<figure>';
-    $image_item .='<a href="p_detail.php?prod_id='.$prod_id.'"><img src="images/'.$prod_catalog.'"></a>';
+    $image_item .='<a href="product_detail.php?prod_id='.$prod_id.'"><img src="images/'.$prod_catalog.'"></a>';
     $image_item .= '<figcaption><a href="product_detail.php?prod_id=' .$prod_id.'">'.$prod_name.' - $'.$prod_price.'</a></figcaption>';
     $image_item .='</figure>';
     $image_item .='</div>';
@@ -39,7 +39,7 @@ $image_item = "";
 while(list($prod_id, $prod_name, $prod_description, $prod_price, $prod_catalog, $price_detail)=$result->fetch_row()){
     $image_item .='<div class="col-3">';
     $image_item .='<figure>';
-    $image_item .='<a href="p_detail.php?prod_id='.$prod_id.'"><img src="images/'.$prod_catalog.'"></a>';
+    $image_item .='<a href="product_detail.php?prod_id='.$prod_id.'"><img src="images/'.$prod_catalog.'"></a>';
     $image_item .= '<figcaption><a href="product_detail.php?prod_id=' .$prod_id.'">'.$prod_name.' - $'.$prod_price.'</a></figcaption>';
     $image_item .='</figure>';
     $image_item .='</div>';

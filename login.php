@@ -9,6 +9,14 @@ require 'includes/data_connection.php';
 $user_email = $_POST['email'];
 $readable_pw = $_POST['readable_pw'];
 $submit = $_POST['submit'];
+?>
+
+
+<header>
+    <h1>Login Please</h1>
+</header>
+
+<?php
 
 if ($submit) {
 
@@ -25,14 +33,6 @@ if ($submit) {
         echo "<br>Login Failed";
     }
 }
-?>
-
-
-<header>
-    <h1>Login Please</h1>
-</header>
-
-<?php
 
 $login = <<<LOGIN
 
@@ -41,9 +41,9 @@ $login = <<<LOGIN
     <fieldset>
         <legend>Welcome back!</legend>
         <label>Username</label>
-        <input type="text" name="email" value="$user_email"><br>
+        <input type="text" name="email" value="$user_email" required><br>
         <label>Password</label>
-        <input type="password" name="readable_pw" value="$readable_pw"><br>
+        <input type="password" name="readable_pw" value="$readable_pw" required><br>
         <input type="submit" name="submit" value="Login">
         <a class="login-forgot-pw link-on-white-back" href="#">Forgot your password?</a>
     </fieldset>

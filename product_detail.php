@@ -72,10 +72,7 @@ $comment = <<<EOU
 
 <div class="story-edit-container">
     <form method="POST" action="comment_new.php">
-        <input type="hidden" name="prod_id" value="$prod_id"/>
-        <p><input type="text" name="author" value="$comment_author" placeholder="Your name"></p>
-        <textarea rows="7" cols="63" name="comment" placeholder="Your comments">$comment</textarea>
-        <p>
+            <p>
             <label for="inquiry">Rate this boxer: </label>
             $select
         </p>
@@ -86,6 +83,10 @@ $comment = <<<EOU
             <option value="4">4 Bones</option>
             <option value="5">5 Bones</option>
         </select>
+        <input type="hidden" name="prod_id" value="$prod_id"/>
+        <p><input type="text" name="author" value="$comment_author" placeholder="Your name"></p>
+        <textarea rows="7" cols="63" name="comment" placeholder="Your comments">$comment</textarea>
+
 
         <p><input type="submit" name="submit" value="Submit"></p>
     </form>
