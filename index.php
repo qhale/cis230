@@ -24,9 +24,9 @@ require 'includes/nav.php';
     </div>
 </main>
 <div class="row entice">
-    <a class="col-4 backstory" href="archive/news.html">Find out about recent adoptions and new happy homes!</a>
-    <a class="col-4 portfolio" href="archive/products.html">See which dogs are available to come home with you!</a>
-    <a class="col-4 contact" href="archive/contactus.html">Ready to adopt? Contact us!</a>
+    <a class="col-4 backstory" href="news.php">Find out about recent adoptions and new happy homes!</a>
+    <a class="col-4 portfolio" href="products.php">See which dogs are available to come home with you!</a>
+    <a class="col-4 contact" href="contactus.php">Ready to adopt? Contact us!</a>
 </div>
 
 
