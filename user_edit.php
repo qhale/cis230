@@ -62,6 +62,7 @@ if ($submit) {
 
         $sql = "UPDATE users SET f_name='$f_name', l_name='$l_name', email='$user_email', password='$password', role='$role' WHERE user_id=$user_id";
         $result = $db->query($sql);
+        mail($user_email, "Your Qhale's Username and Password", "Welcome back to Qhale's Boxer Adoption, ".$f_name."! You have edited your login information. Please keep track of this information for future use: \r\n \r\n Username: ".$user_email."\r\n Password: ".$readable_pw);
         ob_clean();
         header("Location:user_admin.php");
     }

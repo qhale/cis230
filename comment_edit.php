@@ -73,11 +73,11 @@ $comment_edit = <<< EOU
 
     <div class= "story-edit-container">
         <form method='POST' action='comment_edit.php?comment_id=$comment_id'>
-        <p><input type='text' name='author' value='$comment_author' placeholder="Author"></p>
-        <p><input type='text' name='comment' value='$comment' placeholder="Comment"></p>
-        <p><input type='text' name='date' value='$comment_date' placeholder="Date"></p>
-        <p><input type='text' name='rating' value='$rating' placeholder="Rating"></p>
-        <p><input type='text' name='prod_id' value='$prod_id' placeholder="Product ID"></p>
+        <p><input type='text' name='author' value='$comment_author' placeholder="Author" required></p>
+        <p><input type='text' name='comment' value='$comment' placeholder="Comment" required></p>
+        <p><input type='text' name='date' value='$comment_date' placeholder="Date" required></p>
+        <p><input type='text' name='rating' value='$rating' placeholder="Rating" required></p>
+        <p><input type='text' name='prod_id' value='$prod_id' placeholder="Product ID" required></p>
         <p><input type="submit" name="submit" value="Update"></p>
         </form>
     </div>

@@ -1,17 +1,32 @@
 <?php
-$title = 'Admin Page';
+ob_start();
+$title = 'Story Admin';
 require 'includes/head.php';
 require 'includes/nav.php';
 require 'includes/utilities.php';
 require 'includes/data_connection.php';
 
+if (isset($_SESSION['f_name'])) {
+}
+else {
+    ob_clean();
+    header("Location: index.php");
+}
 ?>
 
-<!-- ********** Admin ********** -->
+<!-- ********** Story Admin ********** -->
 
 <header>
-    <h1>Admin Page</h1>
+    <h1>Story Admin</h1>
 </header>
+<nav>
+    <ul>
+        <li><a href="user_admin.php">User Admin</a></li>
+        <li><a href="product_admin.php">Product Admin</a></li>
+        <li><a href="story_admin.php">Story Admin</a></li>
+        <li><a href="comment_admin.php">Comment Admin</a></li>
+    </ul>
+</nav>
 <main class="container">
     <div class="row">
         <div class="col-12">
@@ -45,7 +60,9 @@ require 'includes/data_connection.php';
                         echo "<td><a href='news_detail.php?story_id=$story_id'>$headline</a></td>";
                         echo "<td>$byline</td>";
                         echo "<td>".(substr($text,0,76))."</td>";
-                        echo "<td>$pub_date</td>";
+                        $date = date_create($pub_date);
+                        $formatted_date = date_format($date, 'F d, Y');
+                        echo "<td>$formatted_date</td>";
                         echo "<td><a href='news_detail.php?story_id=$story_id'>View</a></td>";
                         echo "<td><a href='story_edit.php?story_id=$story_id'>Edit</a></td>";
                         echo "<td><a href='story_delete.php?story_id=$story_id'>Delete</a></td>";

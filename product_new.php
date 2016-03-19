@@ -66,11 +66,11 @@ $product_new = <<< EOU
 
     <div class= "story-edit-container">
         <form method='POST' action='product_new.php?prod_id=$prod_id'>
-        <p><input type='text' name='prod_name' value='$prod_name' placeholder="Product name"></p>
-        <p><input type='text' name='description' value='$prod_description' placeholder="Description"></p>
-        <p><input type='text' name='price' value='$prod_price' placeholder="Price"></p>
-        <p><input type='text' name='catalog' value='$prod_catalog' placeholder="Catalog"></p>
-        <p><input type='text' name='detail' value='$prod_detail' placeholder="Detail"></p>
+        <p><input type='text' name='prod_name' value='$prod_name' placeholder="Product name" required></p>
+        <p><input type='text' name='description' value='$prod_description' placeholder="Description" required></p>
+        <p><input type='text' name='price' value='$prod_price' placeholder="Price" required></p>
+        <p><input type='text' name='catalog' value='$prod_catalog' placeholder="Catalog" required></p>
+        <p><input type='text' name='detail' value='$prod_detail' placeholder="Detail" required></p>
         <p><input type="submit" name="submit" value="Update"></p>
         </form>
     </div>

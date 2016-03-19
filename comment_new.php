@@ -56,10 +56,10 @@ $comment_new = <<< EOU
 
     <div class= "story-edit-container">
         <form method='POST' action='comment_new.php?comment_id=$comment_id'>
-        <p><input type='text' name='author' value='$comment_author' placeholder="Author"></p>
-        <p><input type='text' name='comment' value='$comment' placeholder="Comment"></p>
-        <p><input type='text' name='rating' value='$rating' placeholder="Rating"></p>
-        <p><input type='text' name='prod_id' value='$prod_id' placeholder="Product ID"></p>
+        <p><input type='text' name='author' value='$comment_author' placeholder="Author" required></p>
+        <p><input type='text' name='comment' value='$comment' placeholder="Comment" required></p>
+        <p><input type='text' name='rating' value='$rating' placeholder="Rating" required></p>
+        <p><input type='text' name='prod_id' value='$prod_id' placeholder="Product ID" required></p>
         <p><input type="submit" name="submit" value="Update"></p>
         </form>
     </div>

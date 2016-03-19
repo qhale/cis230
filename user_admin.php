@@ -1,10 +1,17 @@
 <?php
+ob_start();
 $title = 'User Admin';
 require 'includes/head.php';
 require 'includes/nav.php';
 require 'includes/utilities.php';
 require 'includes/data_connection.php';
 
+if (isset($_SESSION['f_name'])) {
+}
+else {
+    ob_clean();
+    header("Location: index.php");
+}
 ?>
 
 <!-- ********** User Admin ********** -->
@@ -12,6 +19,14 @@ require 'includes/data_connection.php';
 <header>
     <h1>User Admin</h1>
 </header>
+<nav>
+    <ul>
+        <li><a href="user_admin.php">User Admin</a></li>
+        <li><a href="product_admin.php">Product Admin</a></li>
+        <li><a href="story_admin.php">Story Admin</a></li>
+        <li><a href="comment_admin.php">Comment Admin</a></li>
+    </ul>
+</nav>
 <main class="container">
     <div class="row">
         <div class="col-12">
